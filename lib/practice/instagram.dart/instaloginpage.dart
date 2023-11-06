@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project/practice/instagram.dart/forgotpage.dart';
-import 'package:flutter_project/practice/instagram.dart/instahomepage.dart';
 import 'package:flutter_project/practice/instagram.dart/instasignup.dart';
 import 'package:flutter_project/practice/instagram.dart/instawelcomepage.dart';
 import 'package:google_fonts/google_fonts.dart';

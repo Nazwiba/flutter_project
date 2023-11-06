@@ -1,8 +1,9 @@
-// ignore_for_file: unused_local_variable
+// ignore_for_file: unused_local_variable, body_might_complete_normally_nullable
 
 import 'package:flutter/material.dart';
 import 'package:flutter_project/homepage.dart';
-import 'package:flutter_project/main.dart';
+import 'package:flutter_project/statefull_signup.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -28,14 +29,17 @@ class _StatefullLogin extends State<StatefullLogin> {
         child: Padding(
           padding: const EdgeInsets.all(15.0),
           child: Form(
-            // we can wrap with coloum and put a key: valid key for validation for the multichild
+            // we can wrap with column with wrap with widget and write form and put a key: valid key for validation for the multichild
             key: validkey,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text(
+                Text(
                   "Login Page",
-                  style: TextStyle(fontSize: 35),
+                  style: GoogleFonts.oswald(
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue),
                 ),
                 //intsead of padding here we use sizedbox
                 const SizedBox(
@@ -75,12 +79,11 @@ class _StatefullLogin extends State<StatefullLogin> {
                     final valid = validkey.currentState!.validate();
                     if (valid == true) {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) =>HomePage()));
+                          MaterialPageRoute(builder: (context) => HomePage()));
                     } else {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            backgroundColor: Colors.red,
-                            content: Text("Invalid Email/Password")));
+                      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                          backgroundColor: Colors.red,
+                          content: Text("Invalid Email/Password")));
                     }
                   },
                   color: Colors.blue,
@@ -88,7 +91,12 @@ class _StatefullLogin extends State<StatefullLogin> {
                   child: const Text("Login"),
                 ),
                 TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => StatefulSignUp()));
+                    },
                     child: const Text("Not a User? Register Here!!"))
               ],
             ),
