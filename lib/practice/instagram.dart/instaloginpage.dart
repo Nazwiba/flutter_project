@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project/practice/instagram.dart/forgotpage.dart';
 import 'package:flutter_project/practice/instagram.dart/instasignup.dart';
 import 'package:flutter_project/practice/instagram.dart/instawelcomepage.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -80,28 +79,6 @@ class InstaLoginPage extends StatelessWidget {
               shape: const StadiumBorder(),
               child: Text("Login", style: GoogleFonts.notoSerif(fontSize: 30)),
             ),
-            TextButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => InstaforgotPage()));
-                },
-                child: RichText(
-                    text: TextSpan(
-                        style: GoogleFonts.junge(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.normal),
-                        children: [
-                      const TextSpan(text: "Forgot Your password?"),
-                      TextSpan(
-                          text: "Get Help Signing in",
-                          style: GoogleFonts.junge(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold)),
-                    ]))),
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: TextButton(

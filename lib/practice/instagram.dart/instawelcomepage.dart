@@ -15,11 +15,10 @@ class InstaWelcomPage extends StatelessWidget {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
+              Colors.deepPurple,
               Colors.purple,
               Colors.pink,
               Colors.orange,
-              Colors.pink,
-              Colors.purple,
               //Colors.black,
             ])),
         child: Center(
@@ -52,7 +51,7 @@ class InstaWelcomPage extends StatelessWidget {
               Text(
                 "Want to share your own!? Tap the Sign Up Or Login button below!!",
                 style: GoogleFonts.rosarivo(
-                    fontSize: 30,
+                    fontSize: 15,
                     color: Colors.white,
                     fontWeight: FontWeight.normal),
               ),

@@ -1,7 +1,7 @@
 // ignore_for_file: unused_local_variable, body_might_complete_normally_nullable
 
 import 'package:flutter/material.dart';
-import 'package:flutter_project/homepage.dart';
+import 'package:flutter_project/statefull_home.dart';
 import 'package:flutter_project/statefull_signup.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -17,13 +17,19 @@ class StatefullLogin extends StatefulWidget {
 }
 
 class _StatefullLogin extends State<StatefullLogin> {
+  final userController = TextEditingController();
+  final passwordController = TextEditingController();
   final validkey =
       GlobalKey<FormState>(); // we can add validation ,use this key
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("LOGIN PAGE"), // here we use titilr for the appbar
+        backgroundColor: Colors.green,
+        title: const Text(
+          "LOGIN PAGE",
+          style: TextStyle(color: Colors.white),
+        ), // here we use titilr for the appbar
       ),
       body: Center(
         child: Padding(
@@ -37,15 +43,19 @@ class _StatefullLogin extends State<StatefullLogin> {
                 Text(
                   "Login Page",
                   style: GoogleFonts.oswald(
-                      fontSize: 40,
+                      fontSize: 50,
                       fontWeight: FontWeight.bold,
-                      color: Colors.blue),
+                      color: Colors.green),
                 ),
+                Text("To keep connected with us please login with your personal info",
+                      style: GoogleFonts.notoSerif(fontSize: 20,fontWeight: FontWeight.normal,color: Colors.black), 
+                      ),
                 //intsead of padding here we use sizedbox
                 const SizedBox(
                   height: 15,
                 ),
                 TextFormField(
+                  controller: userController,
                   // instead of textfield here we use textformfield
                   validator: (email) {
                     if (email!.isEmpty ||
@@ -55,12 +65,18 @@ class _StatefullLogin extends State<StatefullLogin> {
                     } //! is put in the right it is null check and put in the left it gives not(opoosite of the statement)
                   },
                   decoration: const InputDecoration(
-                      border: OutlineInputBorder(), hintText: "Username"),
+                      enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.green)),
+                      focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.green)),
+                      border: OutlineInputBorder(),
+                      hintText: " Enter Username"),
                 ),
                 const SizedBox(
                   height: 15,
                 ),
                 TextFormField(
+                  controller: passwordController,
                   // value that we typed in formfield will stored in email
                   validator: (password) {
                     if (password!.isEmpty || password.length < 6) {
@@ -68,7 +84,12 @@ class _StatefullLogin extends State<StatefullLogin> {
                     }
                   },
                   decoration: const InputDecoration(
-                      border: OutlineInputBorder(), hintText: "Password"),
+                      enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.green)),
+                      focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.green)),
+                      border: OutlineInputBorder(),
+                      hintText: "Enter Password"),
                 ),
                 const SizedBox(
                   height: 15,
@@ -79,16 +100,20 @@ class _StatefullLogin extends State<StatefullLogin> {
                     final valid = validkey.currentState!.validate();
                     if (valid == true) {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => HomePage()));
+                          MaterialPageRoute(builder: (context) => Home()));
                     } else {
                       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                           backgroundColor: Colors.red,
                           content: Text("Invalid Email/Password")));
                     }
+                    userController.clear();
+                    passwordController.clear();
                   },
-                  color: Colors.blue,
+                  height: 40,
+                  minWidth: 250,
+                  color: Colors.green,
                   shape: const StadiumBorder(),
-                  child: const Text("Login"),
+                  child: Text("Login",style: GoogleFonts.notoSerif(),),
                 ),
                 TextButton(
                     onPressed: () {
@@ -97,7 +122,10 @@ class _StatefullLogin extends State<StatefullLogin> {
                           MaterialPageRoute(
                               builder: (context) => StatefulSignUp()));
                     },
-                    child: const Text("Not a User? Register Here!!"))
+                    child: const Text(
+                      "Not a User? Register Here!!",
+                      style: TextStyle(color: Colors.green,fontWeight: FontWeight.bold),
+                    ))
               ],
             ),
           ),
