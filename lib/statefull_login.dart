@@ -25,10 +25,10 @@ class _StatefullLogin extends State<StatefullLogin> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.white,
         title: const Text(
           "LOGIN PAGE",
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.green),
         ), // here we use titilr for the appbar
       ),
       body: Center(
