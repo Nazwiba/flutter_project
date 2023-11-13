@@ -59,6 +59,7 @@ class HomePage extends StatelessWidget {
                 ],
               ),
               leading: CircleAvatar(
+          
                 backgroundColor: Colors.orange,
                 child: Icon(Icons.music_video),
               ),

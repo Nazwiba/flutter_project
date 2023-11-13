@@ -95,7 +95,7 @@ class Home extends StatefulWidget {
                   ],
                 ),
                 leading: CircleAvatar(
-                  backgroundImage: AssetImage("assets/images/person image 2.png"),
+                  //backgroundImage: AssetImage("assets/images/person image 2.png"),
                 ),
                 trailing: Column(
                   children: [
