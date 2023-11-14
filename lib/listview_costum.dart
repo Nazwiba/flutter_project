@@ -40,7 +40,7 @@ class ListView4 extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-          Image.asset("assets/images/strawberry image.jpg",height: 100,),
+          Image.asset("assets/icons/strawberry.png",height: 100,),
           const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
