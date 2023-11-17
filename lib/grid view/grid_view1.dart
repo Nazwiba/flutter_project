@@ -28,7 +28,9 @@ class GridView1 extends StatelessWidget {
       // crosaxis - vertical mainaxis - horizontal
       //maxcrosaxis - the number of image limit is with respect to the screen size ,increase sreensize increase the number of tile
       children: List.generate(20, (index) => 
-      Container(
+       Container(
+      
+        
         color: Colors.black,
         child: Image.asset("assets/images/london image.jpg"),
         
