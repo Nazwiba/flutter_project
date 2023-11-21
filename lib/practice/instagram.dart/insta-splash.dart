@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(MaterialApp(debugShowCheckedModeBanner: false,
     home: InstagramSplash(),
   ));
 }

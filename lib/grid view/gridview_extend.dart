@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
-class Staggered_grid2 extends StatelessWidget {
+void main() {
+  runApp(MaterialApp(
+    home: Staggered_GridView1(),
+  ));
+}
+
+class Staggered_GridView1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:SingleChildScrollView(
+      body: SingleChildScrollView(
         child: StaggeredGrid.extent(
           maxCrossAxisExtent: 200,
           children: [

@@ -1,10 +1,11 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_project/practice/whatsapp_ui.dart/whatsapp_home.dart';
+import 'package:flutter_project/practice/whatsapp_clone.dart/whatsapp_tab.dart';
 
 void main() {
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     home: WhatsApp(),
   ));
 }
@@ -19,7 +20,7 @@ class _WhatsApp extends State<WhatsApp> {
   void initState() {
     Timer(Duration(seconds: 2), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (Context) => WhatsAppHome()));
+          context, MaterialPageRoute(builder: (Context) => WhatsAppTab()));
     });
     super.initState();
   }
