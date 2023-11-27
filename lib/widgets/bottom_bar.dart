@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project/grid%20view/grid_view1.dart';
-import 'package:flutter_project/grid%20view/grid_view2.dart';
 import 'package:flutter_project/grid%20view/grid_view3.dart';
-import 'package:flutter_project/grid%20view/grid_view4.dart';
 import 'package:flutter_project/stateless_listview.dart';
 
 void main() {
@@ -38,6 +36,7 @@ class _BottomBarState extends State<BottomBar> {
               index = tapindex;
             });
           },
+          //type: BottomNavigationBarType.shifting,
           currentIndex: index,
           items: const [
             BottomNavigationBarItem(

@@ -3,6 +3,7 @@ import 'package:flutter_project/stateless_listview.dart';
 void main() {
     runApp(MaterialApp(debugShowCheckedModeBanner: false,
       home: TabBarEg(),
+      theme: ThemeData(primarySwatch: Colors.green), // for change the theme
     ));
   }
 
