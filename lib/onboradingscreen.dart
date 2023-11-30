@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project/login_page.dart';
-import 'package:flutter_project/splash.dart';
 import 'package:flutter_project/splash_statefull.dart';
-import 'package:flutter_project/statefull_login.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
 void main() {

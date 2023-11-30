@@ -1,7 +1,6 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_project/grid%20view/grid_view1.dart';
-import 'package:flutter_project/grid%20view/grid_view2.dart';
 import 'package:flutter_project/grid%20view/grid_view3.dart';
 import 'package:flutter_project/stateless_listview.dart';
 
