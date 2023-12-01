@@ -1,35 +1,28 @@
 import 'package:flutter/material.dart';
-void main() {
-  runApp(MaterialApp(
-    home: HomePage(),
-  ));
-}
 
-class HomePage extends StatefulWidget {
+class NotificationPage extends StatefulWidget {
+  const NotificationPage({super.key});
+
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<NotificationPage> createState() => _NotificationPageState();
 }
 
-class _HomePageState extends State<HomePage> {
- 
+class _NotificationPageState extends State<NotificationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: const Text(
-          "Home",
-          style: TextStyle(fontSize: 40,color: Colors.black),),
+        title: const Text("Notification",style: TextStyle(fontSize: 40,color: Colors.black),),
         bottom:PreferredSize(preferredSize: Size.zero, child: Container(
           child: const Divider(
             color: Colors.green,
             height: 4.0,
             thickness: 5,
-            endIndent: 400,
+            endIndent: 350,
           ),),
-          ),
+          )
       ),
-      
     );
   }
 }

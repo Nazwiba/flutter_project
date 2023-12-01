@@ -1,25 +1,19 @@
 import 'package:flutter/material.dart';
-void main() {
-  runApp(MaterialApp(
-    home: HomePage(),
-  ));
-}
 
-class HomePage extends StatefulWidget {
+class Settings extends StatefulWidget {
+  
+
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<Settings> createState() => _SettingsState();
 }
 
-class _HomePageState extends State<HomePage> {
- 
+class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: const Text(
-          "Home",
-          style: TextStyle(fontSize: 40,color: Colors.black),),
+        title: const Text("Settings",style: TextStyle(fontSize: 40,color: Colors.black),),
         bottom:PreferredSize(preferredSize: Size.zero, child: Container(
           child: const Divider(
             color: Colors.green,
@@ -27,9 +21,8 @@ class _HomePageState extends State<HomePage> {
             thickness: 5,
             endIndent: 400,
           ),),
-          ),
+          )
       ),
-      
     );
   }
 }
