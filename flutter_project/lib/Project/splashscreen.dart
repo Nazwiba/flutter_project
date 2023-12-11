@@ -2,12 +2,16 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_project/Project/bottombar.dart';
+import 'package:flutter_project/Project/details.dart';
 
 
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     home: ShoppingApp(),
+    routes: {
+      "Details" :(context) => Details1()
+    },
   ));
 }
 

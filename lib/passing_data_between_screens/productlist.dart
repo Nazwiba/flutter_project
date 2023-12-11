@@ -36,6 +36,7 @@ class ProductList extends StatelessWidget {
                 
                       //leading: Text(e["Name"],style: const TextStyle(fontSize: 20),),
                       onTap: () => gotodetails(context, e["id"]),
+                    
                     ),
               ))
               .toList()

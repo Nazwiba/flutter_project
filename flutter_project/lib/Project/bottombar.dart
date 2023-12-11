@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project/Project/cart.dart';
+import 'package:flutter_project/Project/details.dart';
 import 'package:flutter_project/Project/favorite.dart';
 import 'package:flutter_project/Project/homepage.dart';
 import 'package:flutter_project/Project/notification.dart';
@@ -19,7 +20,7 @@ class _Bottom2State extends State<Bottom2> {
     FavoritePage(),
     Cart(),
     NotificationPage(),
-    Settings()
+    Settings(),
   ];
   @override
   Widget build(BuildContext context) {
